@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32002.261
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RestWithAPSNET5", "RestWithAPSNET5\RestWithAPSNET5.csproj", "{F381B60F-971E-4F5B-93A8-49976A561875}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F381B60F-971E-4F5B-93A8-49976A561875}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F381B60F-971E-4F5B-93A8-49976A561875}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F381B60F-971E-4F5B-93A8-49976A561875}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F381B60F-971E-4F5B-93A8-49976A561875}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3938DBD9-BF0F-41A3-A4DA-F57203FAAA2E}
+	EndGlobalSection
+EndGlobal
