@@ -7,6 +7,8 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
+using RestWithAPSNET5.Model;
+using RestWithAPSNET5.Services.Implementations;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -28,6 +30,9 @@ namespace RestWithAPSNET5
         {
 
             services.AddControllers();
+            //Dependecy Injection 
+            services.AddScoped<IPersonService, PersonServiceImplementation>();
+
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "RestWithAPSNET5", Version = "v1" });
