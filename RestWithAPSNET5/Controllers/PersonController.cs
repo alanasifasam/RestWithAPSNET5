@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 namespace RestWithAPSNET5.Controllers
 {
     [ApiController]
-    [Route("[controller]")]
+    [Route("api/[controller]")]
     public class PersonController : ControllerBase
     {
 
@@ -37,19 +37,25 @@ namespace RestWithAPSNET5.Controllers
             return Ok(person);
         }
 
-        [HttpPost("{id}")]
+        [HttpPost]
         public IActionResult Post([FromBody] Person person)
         {
             if (person == null) return BadRequest();
             return Ok(_personService.Create(person));
         }
 
-        [HttpPut("{id}")]
+        [HttpPut]
         public IActionResult Put([FromBody] Person person)
         {
             if (person == null) return BadRequest();
-            return Ok(_personService.Create(person));
+            return Ok(_personService.Update(person));
         }
 
+        [HttpDelete("{id}")]
+        public IActionResult Delete(long id)
+        {
+            _personService.Delete(id);
+            return NoContent();
+        }
     }
 }

@@ -17,10 +17,7 @@ namespace RestWithAPSNET5.Services.Implementations
             return person;
         }
 
-        public void Delete(long id)
-        {
-           
-        }
+      
 
         public List<Person> FindAll()
         {
@@ -53,10 +50,7 @@ namespace RestWithAPSNET5.Services.Implementations
             return person;
         }
 
-        Person IPersonService.Delete(long id)
-        {
-            throw new NotImplementedException();
-        }
+     
 
         private Person MockPerson(int i)
         {
@@ -74,6 +68,10 @@ namespace RestWithAPSNET5.Services.Implementations
         private long IncrementAndGet()
         {
             return Interlocked.Increment(ref count);
+        }
+
+        public void Delete(long id)
+        {
         }
     }
 }

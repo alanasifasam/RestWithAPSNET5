@@ -9,6 +9,7 @@ namespace RestWithAPSNET5.Services.Implementations
         Person FindById(long id);
         List<Person> FindAll();
         Person Update(Person person);
-        Person Delete(long id);
+       // Person Delete(long id);
+        void Delete(long id);
     }
 }
