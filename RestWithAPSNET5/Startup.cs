@@ -33,7 +33,7 @@ namespace RestWithAPSNET5
             services.AddDbContext<MySQLContext>(options => options.UseMySql(connection,ServerVersion.AutoDetect(connection)));
 
 
-                  
+            services.AddApiVersioning();    
 
 
             //Dependecy Injection 

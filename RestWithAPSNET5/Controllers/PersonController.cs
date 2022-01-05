@@ -2,15 +2,13 @@
 using Microsoft.Extensions.Logging;
 using RestWithAPSNET5.Model;
 using RestWithAPSNET5.Services.Implementations;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+
 
 namespace RestWithAPSNET5.Controllers
 {
+    [ApiVersion("1")]
     [ApiController]
-    [Route("api/[controller]")]
+    [Route("api/[controller]/v{version:apiVersion}")]
     public class PersonController : ControllerBase
     {
 
