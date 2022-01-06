@@ -3,16 +3,15 @@ using RestWithAPSNET5.Model.Context;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading;
-using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore.Internal;
 
-namespace RestWithAPSNET5.Services.Implementations
+namespace RestWithAPSNET5.Repository.Implementations
 {
-    public class PersonServiceImplementation : IPersonService
+    public class PersonRepositoryImplementation : IPersonRepository
     {
         private MySQLContext _context;
 
-        public PersonServiceImplementation(MySQLContext context)
+        public PersonRepositoryImplementation(MySQLContext context)
         {
             _context = context;
         }
@@ -83,7 +82,7 @@ namespace RestWithAPSNET5.Services.Implementations
                 }
             }
         }
-        private bool Exists(long id)
+        public bool Exists(long id)
         {
             return _context.Persons.Any(p => p.Id.Equals(id));
         }

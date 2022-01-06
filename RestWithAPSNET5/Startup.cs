@@ -7,8 +7,12 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
+using RestWithAPSNET5.Business;
+using RestWithAPSNET5.Business.Implementations;
 using RestWithAPSNET5.Model.Context;
-using RestWithAPSNET5.Services.Implementations;
+using RestWithAPSNET5.Repository;
+using RestWithAPSNET5.Repository.Implementations;
+
 
 
 namespace RestWithAPSNET5
@@ -37,7 +41,8 @@ namespace RestWithAPSNET5
 
 
             //Dependecy Injection 
-            services.AddScoped<IPersonService, PersonServiceImplementation>();
+            services.AddScoped<IPersonBusiness, PersonBusinessImplementation>();
+            services.AddScoped<IPersonRepository, PersonRepositoryImplementation>();
 
             services.AddSwaggerGen(c =>
             {
