@@ -41,7 +41,7 @@ namespace RestWithAPSNET5
             services.AddControllers();
 
             var connection = Configuration["MySQLConnetion:MySQLConnetionString"];
-            services.AddDbContext<MySQLContext>(options => options.UseMySql(connection, ServerVersion.AutoDetect(connection)));
+            services.AddDbContext<MySQLContext>(options => options.UseMySql(connection));
 
             if (Environment.IsDevelopment())
             {
